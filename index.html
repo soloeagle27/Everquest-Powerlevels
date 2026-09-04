@@ -1,164 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Norrath Leveling Co. | EverQuest Power Leveling by Solo Eagle</title>
-<meta name="description" content="EverQuest power-leveling services by Solo Eagle for Lethar and Frostreaver. Years of power-leveling experience. Contact for availability, orders, and questions.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EverQuest power leveling services by Solo Eagle for Lethar and Frostreaver.">
+<title>Norrath Leveling Co. | EverQuest Power Leveling</title>
 <style>
-:root{
-  --bg:#0b0d12;--panel:#151922;--panel2:#1c2130;--text:#f4f0e7;
-  --muted:#a9adba;--gold:#d6a84f;--gold2:#f0c76b;--line:#2a3040;
-  --green:#77c58a
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
-  background:radial-gradient(circle at 80% 0%,#29200e 0,#0b0d12 35%);
-  color:var(--text);line-height:1.6
+body{margin:0;background:#03152d;color:#f7f4e9;font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+a{color:inherit}
+header{position:sticky;top:0;z-index:10;background:#031126eF;border-bottom:3px solid #f5c400;backdrop-filter:blur(8px)}
+.nav{max-width:1200px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.eagle{font-size:42px;line-height:1}
+.brand h1{margin:0;color:#ffd21a;font-size:27px}
+.brand span{display:block;font-size:15px}
+nav{display:flex;gap:26px}
+nav a{text-decoration:none;font-size:17px}
+nav a:hover{color:#ffd21a}
+.btn{display:inline-block;background:linear-gradient(#ffe35a,#f6bd08);color:#071328;text-decoration:none;font-weight:bold;border:2px solid #ffd21a;border-radius:12px;padding:12px 20px;box-shadow:0 4px 12px #0008}
+.btn:hover{transform:translateY(-1px)}
+.hero{background:
+linear-gradient(90deg,#04152de8,#082c59d9,#06172fe8),
+radial-gradient(circle at 70% 35%,#285d9b 0,#0a2c55 38%,#03152d 75%);
+border-bottom:3px solid #f5c400}
+.hero-inner{max-width:1200px;margin:auto;padding:45px 24px 38px;text-align:center}
+.hero h2{font-size:48px;line-height:1.1;color:#ffd21a;margin:0 0 15px;text-shadow:2px 3px 4px #000}
+.hero p{font-size:20px;max-width:900px;margin:0 auto 22px}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.secondary{background:#06234a;color:#fff}
+.section{max-width:1200px;margin:auto;padding:35px 24px}
+.section-title{text-align:center;color:#ffd21a;font-size:38px;margin:0 0 6px}
+.subtitle{text-align:center;font-size:18px;margin:0 0 25px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:linear-gradient(145deg,#082e63,#031a38);border:2px solid #ffd21a;border-radius:18px;padding:22px;box-shadow:0 8px 24px #0007}
+.card h3{margin:0 0 4px;font-size:25px;color:#fff}
+.server{display:inline-block;border:1px solid #ffd21a;color:#ffd21a;border-radius:7px;padding:2px 8px;font-size:13px;font-weight:bold}
+.price{font-size:32px;color:#ffd21a;font-weight:bold;margin:5px 0 12px}
+.card ul{padding-left:22px;margin:10px 0 18px}
+.card li{margin:7px 0}
+.guarantee{background:linear-gradient(#ffe447,#f4c20b);color:#071328;border-radius:12px;padding:9px 10px;text-align:center;font-weight:bold;margin:14px 0}
+.guarantee small{display:block;font-style:italic;font-weight:bold}
+.paypal{width:100%;text-align:center;padding:11px 10px}
+.custom .price{font-size:25px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{background:#062652;border:2px solid #ffd21a;border-radius:14px;padding:16px;text-align:center}
+.num{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:50%;background:#ffd21a;color:#071328;font-weight:bold;font-size:20px;margin-bottom:7px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.info{background:#062652;border:2px solid #ffd21a;border-radius:15px;padding:18px}
+.info h3{color:#ffd21a;margin:0 0 5px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-box{background:#062652;border:2px solid #ffd21a;border-radius:15px;padding:22px}
+.contact-box h3{color:#ffd21a;margin-top:0}
+footer{text-align:center;border-top:2px solid #ffd21a;padding:20px;font-size:13px;color:#ddd}
+@media(max-width:850px){
+ .grid,.steps,.info-grid,.contact{grid-template-columns:1fr}
+ .hero h2{font-size:36px}.brand h1{font-size:21px}nav{gap:10px}nav a{font-size:14px}
 }
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:auto;padding:0 22px}
-nav{
-  min-height:72px;display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid var(--line);gap:20px
-}
-.logo{font-weight:900;letter-spacing:.5px}
-.logo span{color:var(--gold)}
-.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}
-.btn{
-  display:inline-block;padding:12px 18px;border-radius:10px;background:var(--gold);
-  color:#16130c;font-weight:800;border:0;cursor:pointer;transition:.2s
-}
-.btn:hover{background:var(--gold2);transform:translateY(-1px)}
-.btn.secondary{
-  background:transparent;color:var(--gold2);border:1px solid var(--gold)
-}
-.btn.secondary:hover{background:#2b2517}
-.hero{
-  padding:86px 0 68px;display:grid;grid-template-columns:1.2fr .8fr;
-  gap:50px;align-items:center
-}
-.eyebrow{
-  color:var(--gold2);font-weight:800;text-transform:uppercase;
-  letter-spacing:2px;font-size:12px
-}
-h1{font-size:clamp(42px,6vw,70px);line-height:1.02;margin:12px 0 20px}
-.hero p{color:var(--muted);font-size:18px;max-width:680px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.hero-card,.card{
-  background:linear-gradient(145deg,var(--panel2),var(--panel));
-  border:1px solid var(--line);border-radius:18px;
-  box-shadow:0 18px 60px #0005
-}
-.hero-card{padding:26px}
-.stat{
-  display:flex;justify-content:space-between;padding:15px 0;
-  border-bottom:1px solid var(--line);gap:20px
-}
-.stat:last-child{border:0}
-.stat b{color:var(--gold2)}
-section{padding:58px 0}
-h2{font-size:34px;margin:0 0 10px}
-.section-intro{color:var(--muted);margin:0 0 28px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{padding:24px}
-.card h3{margin:0 0 8px}
-.price{font-size:31px;font-weight:900;color:var(--gold2);margin:18px 0 12px}
-.card ul{padding-left:20px;color:var(--muted);min-height:115px}
-.tag{
-  display:inline-block;font-size:11px;font-weight:800;padding:5px 8px;
-  border-radius:999px;background:#2b2517;color:var(--gold2)
-}
-.steps{counter-reset:s}
-.step{position:relative;padding-left:58px}
-.step:before{
-  counter-increment:s;content:counter(s);position:absolute;left:18px;top:24px;
-  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
-  background:var(--gold);color:#17130b;font-weight:900
-}
-.faq{border-top:1px solid var(--line);padding:18px 0}
-.faq b{display:block;margin-bottom:5px}
-.faq span{color:var(--muted)}
-.cta{
-  text-align:center;padding:58px 20px;background:linear-gradient(135deg,#201b10,#151922);
-  border:1px solid var(--line);border-radius:22px
-}
-.contact-box{
-  margin-top:20px;padding:18px;border:1px solid var(--line);
-  border-radius:12px;background:#10131a
-}
-.notice{
-  font-size:13px;color:#a9adba;background:#10131a;border:1px solid var(--line);
-  padding:14px;border-radius:10px;margin-top:16px
-}
-.email{color:var(--gold2);font-weight:700}
-footer{
-  padding:35px 0;color:#7e8390;font-size:12px;
-  border-top:1px solid var(--line);margin-top:58px
-}
-@media(max-width:800px){
-  .hero{grid-template-columns:1fr;padding-top:55px}
-  .grid{grid-template-columns:1fr}
-  .navlinks{display:none}
-  .hero-card{order:-1}
+@media(max-width:560px){
+ header{position:static}.nav{flex-direction:column}.hero-inner{padding-top:30px}
+ .hero h2{font-size:31px}.section-title{font-size:30px}
+ nav{flex-wrap:wrap;justify-content:center}
 }
 </style>
 </head>
-
 <body>
-<div class="wrap">
 
-<nav>
-  <div class="logo">NORRATH <span>LEVELING CO.</span></div>
-  <div class="navlinks">
-    <a href="#services">Services</a>
-    <a href="#how">How It Works</a>
-    <a href="#faq">FAQ</a>
-  </div>
-  <a class="btn" href="#order">Contact / Order</a>
-</nav>
-
-<header class="hero">
-  <div>
-    <div class="eyebrow">EverQuest character services</div>
-    <h1>Level up. Spend less time grinding.</h1>
-    <p>
-      EverQuest power leveling by <strong>Solo Eagle</strong>. I have years of
-      power-leveling experience and provide straightforward leveling services
-      for players who want to spend less time grinding and more time enjoying
-      the game.
-    </p>
-
-    <div class="actions">
-      <a class="btn" href="#services">View Services</a>
-      <a class="btn secondary" href="mailto:soloeagle614@gmail.com?subject=EverQuest%20Power%20Leveling%20Request">Email Solo Eagle</a>
-    </div>
-  </div>
-
-  <div class="hero-card">
-    <span class="tag">DIRECT SERVICE</span>
-    <h3>Power Leveling by Solo Eagle</h3>
-    <div class="stat"><span>Lethar</span><b>Level 50 · $75</b></div>
-    <div class="stat"><span>Frostreaver</span><b>Level 40 · $75</b></div>
-    <div class="stat"><span>Custom requests</span><b>Contact for quote</b></div>
-    <div class="notice">
-      Contact me first so I can confirm availability, your character details,
-      schedule, and the exact service before payment.
-    </div>
+<header>
+  <div class="nav">
+    <a class="brand" href="#home">
+      <div class="eagle">🦅</div>
+      <div><h1>Norrath Leveling Co.</h1><span>EverQuest Power Leveling by Solo Eagle</span></div>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
-<section id="services">
-  <h2>Power-Leveling Services</h2>
-  <p class="section-intro">
-    Simple packages for players who want to get back to the parts of EverQuest they enjoy.
-  </p>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <h2>EverQuest Power Leveling Services</h2>
+    <p>Years of EverQuest power-leveling experience by Solo Eagle. Straightforward leveling services for players who want to spend less time grinding and more time enjoying the game.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:SoloEagle614@gmail.com?subject=EverQuest%20Power%20Leveling%20Request">✉ Contact / Ask Questions</a>
+      <a class="btn secondary" href="mailto:SoloEagle614@gmail.com?subject=EverQuest%20Power%20Leveling%20Request">💬 Discord: soloeagle27</a>
+    </div>
+  </div>
+</section>
 
+<section class="section" id="services">
+  <h2 class="section-title">Power-Leveling Services</h2>
+  <p class="subtitle">Simple packages for players who want to get back to the parts of EverQuest they enjoy.</p>
   <div class="grid">
+
     <article class="card">
-      <span class="tag">LETHAR</span>
+      <span class="server">LETHAR</span>
       <h3>Level 50 Power Level</h3>
       <div class="price">$75 USD</div>
       <ul>
@@ -167,11 +108,14 @@ footer{
         <li>Server: Lethar</li>
         <li>Schedule confirmed by request</li>
       </ul>
-      <a class="btn" href="#order">Order / Ask Questions</a>
+      <div class="guarantee">🛡 100% Money-Back Guarantee
+        <small>If I'm unable to complete the agreed-upon leveling service, you'll receive a full refund.</small>
+      </div>
+      <a class="btn paypal" href="https://paypal.me/nathansolomon312/75" target="_blank" rel="noopener">Ⓟ Order / Pay with PayPal</a>
     </article>
 
     <article class="card">
-      <span class="tag">FROSTREAVER</span>
+      <span class="server">FROSTREAVER</span>
       <h3>Level 40 Power Level</h3>
       <div class="price">$75 USD</div>
       <ul>
@@ -180,152 +124,83 @@ footer{
         <li>Server: Frostreaver</li>
         <li>Schedule confirmed by request</li>
       </ul>
-      <a class="btn" href="#order">Order / Ask Questions</a>
+      <div class="guarantee">🛡 100% Money-Back Guarantee
+        <small>If I'm unable to complete the agreed-upon leveling service, you'll receive a full refund.</small>
+      </div>
+      <a class="btn paypal" href="https://paypal.me/nathansolomon312/75" target="_blank" rel="noopener">Ⓟ Order / Pay with PayPal</a>
     </article>
 
-    <article class="card">
-      <span class="tag">CUSTOM</span>
+    <article class="card custom">
+      <span class="server">CUSTOM</span>
       <h3>Custom Service</h3>
-      <div class="price">Quote</div>
+      <div class="price">Custom Quote</div>
       <ul>
         <li>Other level targets or requirements</li>
         <li>Custom scope and schedule</li>
         <li>Pricing confirmed before payment</li>
         <li>Contact me with your request</li>
       </ul>
-      <a class="btn" href="#order">Request a Quote</a>
+      <div class="guarantee">🛡 100% Money-Back Guarantee
+        <small>Applies to the agreed-upon service if I am unable to complete it.</small>
+      </div>
+      <a class="btn paypal" href="mailto:SoloEagle614@gmail.com?subject=Custom%20EverQuest%20Power%20Leveling%20Quote">✉ Request a Quote</a>
     </article>
+
   </div>
 </section>
 
-<section id="how">
-  <h2>How It Works</h2>
-  <p class="section-intro">A simple process from your first message to completion.</p>
+<section class="section">
+  <h2 class="section-title">How It Works</h2>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><strong>Send Your Request</strong><br>Contact me by email or Discord with your character details.</div>
+    <div class="step"><div class="num">2</div><strong>Choose How We Level</strong><br>I can log your character in, or we can work together while you play, depending on the arrangement.</div>
+    <div class="step"><div class="num">3</div><strong>Pay via PayPal</strong><br>Use the PayPal button above for the $75 service.</div>
+    <div class="step"><div class="num">4</div><strong>Leveling Begins</strong><br>Your character gets focused leveling time and makes great progress.</div>
+  </div>
 
-  <div class="grid">
-    <div class="card step">
-      <h3>Send Your Request</h3>
-      <p class="section-intro">
-        Email your server, character name, current level, target level,
-        and preferred schedule. Ask any questions you have.
-      </p>
+  <div class="info-grid">
+    <div class="info">
+      <h3>⏱ Typical Leveling Time</h3>
+      Most characters can be leveled in approximately <strong>4–8 hours</strong>, depending on the character's current level, server availability, and scheduling. I'll provide a more accurate estimate when you contact me with your character details.
     </div>
-
-    <div class="card step">
-      <h3>Confirm the Details</h3>
-      <p class="section-intro">
-        I'll confirm availability, timing, service requirements, and the
-        final price before you make a payment.
-      </p>
-    </div>
-
-    <div class="card step">
-      <h3>Payment & Leveling</h3>
-      <p class="section-intro">
-        Once the details are confirmed and payment is arranged, the
-        power-leveling service can begin.
-      </p>
+    <div class="info">
+      <h3>📅 Availability & Scheduling</h3>
+      Leveling is available by appointment. Contact me to schedule your character, and I'll work with your schedule to level efficiently and in a timely, focused session.
     </div>
   </div>
 </section>
 
-<section id="order">
-  <div class="cta">
-    <span class="tag">CONTACT SOLO EAGLE</span>
-    <h2>Ready to level?</h2>
-    <p class="section-intro">
-      Have a question or want to place an order? Send me an email with your
-      character and leveling requirements. I'll respond with availability,
-      timing, and payment instructions.
-    </p>
+<section class="section" id="faq">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="info-grid">
+    <div class="info"><h3>How do I get started?</h3>Contact me by email or Discord with your server, current character level, target level, and preferred schedule.</div>
+    <div class="info"><h3>How long does it take?</h3>Typical leveling is approximately 4–8 hours, depending on level, server availability, and scheduling.</div>
+    <div class="info"><h3>How do we level?</h3>I can log your character in, or we can work together while you play. The approach is agreed upon before the service begins.</div>
+    <div class="info"><h3>What is the refund policy?</h3>A <strong>100% money-back guarantee</strong> applies if I am unable to complete the agreed-upon leveling service.</div>
+  </div>
+</section>
 
-    <div class="actions" style="justify-content:center">
-      <a class="btn" href="mailto:soloeagle614@gmail.com?subject=EverQuest%20Power%20Leveling%20Request&body=Server%3A%20%0ACharacter%20Name%3A%20%0ACurrent%20Level%3A%20%0ATarget%20Level%3A%20%0APreferred%20Schedule%3A%20%0AQuestions%2FNotes%3A%20">
-        Email to Place an Order
-      </a>
-    </div>
-
+<section class="section" id="contact">
+  <div class="contact">
     <div class="contact-box">
-      <strong>Email:</strong>
-      <a class="email" href="mailto:soloeagle614@gmail.com">soloeagle614@gmail.com</a>
-      <br>
-      <span style="color:var(--muted)">
-        Years of power-leveling experience. If you have any questions, please feel free to contact me.
-      </span>
+      <h2 class="section-title" style="text-align:left;font-size:30px">Contact / Order</h2>
+      <p><strong>📧 Email:</strong> <a href="mailto:SoloEagle614@gmail.com">SoloEagle614@gmail.com</a></p>
+      <p><strong>💬 Discord:</strong> soloeagle27</p>
     </div>
-
-    <div class="notice">
-      <strong>Payment:</strong> Please contact me before sending payment.
-      I'll confirm the service details and provide the appropriate payment instructions.
+    <div class="contact-box">
+      <h3>PayPal</h3>
+      <p>PayPal payment is available through the service buttons above.</p>
+      <p><strong>PayPal email:</strong> SoloEagle614@gmail.com</p>
+      <a class="btn" href="https://paypal.me/nathansolomon312/75" target="_blank" rel="noopener">Ⓟ Open PayPal</a>
     </div>
-  </div>
-</section>
-
-<section id="faq">
-  <h2>FAQ</h2>
-
-  <div class="faq">
-    <b>What servers do you currently service?</b>
-    <span>
-      Current standard services are Lethar to level 50 and Frostreaver to level 40.
-      Contact me for custom requests or questions about availability.
-    </span>
-  </div>
-
-  <div class="faq">
-    <b>How do I place an order?</b>
-    <span>
-      Email me with your server, character name, current level, target level,
-      and preferred schedule. I'll confirm the details before payment.
-    </span>
-  </div>
-
-  <div class="faq">
-    <b>How much do the standard services cost?</b>
-    <span>
-      Lethar level 50 is $75 USD for one character. Frostreaver level 40 is
-      $75 USD for one character. Custom requests receive a quote.
-    </span>
-  </div>
-
-  <div class="faq">
-    <b>Can I request a specific schedule?</b>
-    <span>
-      Yes. Include your preferred dates and times in your email. Scheduling is
-      confirmed based on availability.
-    </span>
-  </div>
-
-  <div class="faq">
-    <b>Can I contact you with questions before ordering?</b>
-    <span>
-      Absolutely. Email Solo Eagle at
-      <a class="email" href="mailto:soloeagle614@gmail.com">soloeagle614@gmail.com</a>.
-    </span>
-  </div>
-
-  <div class="faq">
-    <b>Are you affiliated with EverQuest or Daybreak Game Company?</b>
-    <span>
-      No. This is an independent service. EverQuest and related trademarks
-      belong to their respective owners.
-    </span>
   </div>
 </section>
 
 <footer>
-  © 2026 Norrath Leveling Co. · Independent service provider ·
-  Contact:
-  <a class="email" href="mailto:soloeagle614@gmail.com">soloeagle614@gmail.com</a>
-  <br><br>
-  EverQuest and related trademarks belong to their respective owners.
-  This site is not affiliated with or endorsed by Daybreak Game Company.
-  Services should be provided and used in accordance with applicable game
-  rules and payment-provider policies.
+  <p>EverQuest® is a registered trademark of Sony Online Entertainment LLC. This site is not affiliated with or endorsed by SOE.</p>
+  <p>Norrath Leveling Co. — Power Leveling Services for EverQuest</p>
 </footer>
-
-</div>
 </body>
 </html>
-index-2.html
-Displaying index-2.html.
+index_github_pages_final.html
+Displaying index_github_pages_final.html. 
